@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'FzBefront';
+    font-style: normal;
+    font-weight: normal;
+    src: local('FzBefront'), url('./fonts/FzBefront.ttf') format('truetype');
+}
+body {
+    margin: 0px;
+    font-family: 'FzBefront', serif;
+    font-size: 48px;
+}
