@@ -12,7 +12,7 @@
                     Việt Tiến và Quỳnh Vân 
                 </div>
                 <div class="timeline mt-4">
-                    Thứ tự mốc thời gian
+                    MỐC THỜI GIAN
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                 font-size: 45px;
             }
             .timeline {
-                font-size: 24px;
+                font-size: 16px;
             }
         }
     }
