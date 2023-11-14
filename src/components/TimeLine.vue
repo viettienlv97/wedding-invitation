@@ -4,14 +4,8 @@
             <div class="col-sm-12 col-md-6 center-img">
                 <img style="max-width: 65%;" src="../../public/img/time-line.png" alt="">
             </div>
-            <div class="welcome position-absolute">
-                <div class="title">
-                    CHÀO MỪNG ĐẾN VỚI ĐÁM CƯỚI CỦA
-                </div>
-                <div class="name">
-                    Việt Tiến và Quỳnh Vân 
-                </div>
-                <div class="timeline mt-4">
+            <div class="welcome position-absolute" style="top: 15vh;">
+                <div class="timeline">
                     MỐC THỜI GIAN
                 </div>
             </div>
