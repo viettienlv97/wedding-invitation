@@ -25,7 +25,7 @@
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .wrapper {
         height: 90vh;
 

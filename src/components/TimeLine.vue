@@ -36,7 +36,7 @@
             top: 5%;
             .title, .timeline {
                 font-size: 14px;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
             .name {
                 font-size: 45px;
