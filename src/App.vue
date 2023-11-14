@@ -1,17 +1,20 @@
 <template>
   <MainTemplate/>
   <TimeLine/>
+  <WeddingPictures />
 </template>
 
 <script>
 import MainTemplate from './components/MainTemplate.vue'
 import TimeLine from './components/TimeLine.vue';
+import WeddingPictures from './components/WeddingPictures.vue'
 
 export default {
   name: 'App',
   components: {
     MainTemplate,
-    TimeLine
+    TimeLine,
+    WeddingPictures
   }
 }
 </script>
@@ -24,5 +27,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin: 0px;
+}
+.font-default {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;;
+}
+
+.font-handwriting {
+  font-family: 'FzBefront', serif;
 }
 </style>
