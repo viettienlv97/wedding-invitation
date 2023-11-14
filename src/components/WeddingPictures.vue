@@ -1,27 +1,25 @@
 <template>
     <div class="wrapper ">
-        <div class="row p-0 h-100 justify-content-center">
+        <div class="row no-gutters p-0 h-100 justify-content-center">
             <div class="col-sm-12 col-md-6">
                 <div class="title font-default my-5">ALBUMS</div>
                 <carousel 
-            :items-to-show="1"
-            :autoplay="0"
-            :transition="600"
-            :wrapAround="true"
-            >
-                <slide v-for="slide in 10" :key="slide">
-                    <div class="img-wrapper font-default" style="width: 50vh; height: 50vh; border: 1px solid black;">
-                        <div class="img" @click="openModalImg()">
-                            <img src='../../public/img/photo_2023-11-11_22-17-41.jpg' alt="">
+                    :items-to-show="1"
+                    :autoplay="2000"
+                    :transition="600"
+                    :wrapAround="true"
+                    >
+                    <slide v-for="(image, index) in imageList" :key="index">
+                        <div class="img-wrapper font-default" @click="openModalImg(image)">
+                            <img :src='image' alt="" class="img-fluid img">
                         </div>
-                    </div>
-                </slide>
+                    </slide>
 
-                <template #addons>
-                    <navigation />
-                    <pagination />
-                </template>
-            </carousel>
+                    <template #addons>
+                        <navigation />
+                        <pagination />
+                    </template>
+                </carousel>
             </div>
             
         </div>
@@ -52,15 +50,24 @@ export default {
     data () {
         return {
             openModal: false,
-            fakeImg: '../../public/img/photo_2023-11-11_22-17-41.jpg',
-            selectedImg: null
+            selectedImg: null,
+            imageList: []
         }
+    },
+    mounted() {
+        this.loadImage()
     },
 
     methods: {
-        openModalImg() {
+        loadImage() {
+            const imagesContext = require.context("@/assets/img/albums", false, /\.(jpg|jpeg|png)$/)
+            const imagePaths = imagesContext.keys();
+            this.imageList = imagePaths.map((path) => imagesContext(path));
+        },
+
+        openModalImg(image) {
             this.openModal = true
-            this.selectedImg = this.fakeImg
+            this.selectedImg = image
         },
 
         closeModal() {
@@ -75,21 +82,31 @@ export default {
         background-color: white;
         height: 100vh;
         position: relative;
+
+        .title {
+            font-size: 24px;
+        }
     }
     .img-wrapper {
         border-radius: 24px;
         padding: 8px;
-        background-color: white;
+        background-color: rgb(71, 71, 71);
+        width: 500px;
+        height: 500px;
+        border: 2px solid white;
+        overflow: hidden;
+        position: relative;
 
         .img {
-            width: 100%;
-            background-color: gray;
-            height: 100%;
-            border-radius: 16px;
-
-            img {
-                height: 100%;
-            }
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 </style>

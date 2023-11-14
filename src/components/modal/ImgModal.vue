@@ -1,9 +1,7 @@
 <template>
     <div id="img-modal">
-        <div class="wrapper" @click="closeModal">
-            <div class="img">
-                <img src="../../../public/img/photo_2023-11-11_22-17-41.jpg" />
-            </div>
+        <div class="wrapper d-flex align-items-center justify-content-center" @click="closeModal">
+            <img :src="img" />
         </div>
     </div>
 </template>
@@ -35,17 +33,18 @@ export default {
         .wrapper {
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 01);
 
-            .img {
-                width: 100%;
-                height: 100%;
-
-                img {
-                    height: 100%
-                }
+            img {
+                max-width: 100vw;
+                max-height: 100vh;
+                height: auto;
+                width: auto;
             }
         }
+    }
+
+    @media (min-width: 576px) {
     }
 
 </style>
