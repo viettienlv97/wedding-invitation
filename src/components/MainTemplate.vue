@@ -1,6 +1,6 @@
 <template>
-    <div class="wrapper">
-        <div class="row h-100 align-items-center justify-content-center">
+    <div class="wrapper justify-content-center">
+        <div class="row no-gutters h-100 align-items-center justify-content-center">
             <div class="col-sm-12 col-md-6 center-img">
                 <img style="max-width: 100%;" src="../../public/img/main-background.png" alt="">
                 
@@ -13,7 +13,7 @@
 
                 <div class="info">
                     <p class="">2023.12.02. FRI PM 05:00</p>
-                    <p class="">GOLDEN PALACE LONG BIÊN</p>
+                    <p class="">GOLDEN PALACE LONG BIEN</p>
                 </div>
             </div>
             
@@ -27,6 +27,7 @@
 
 <style lang="scss" scoped>
     .wrapper {
+        width: 100%;
         height: 90vh;
 
         .center-img {
@@ -73,6 +74,29 @@
     @media (min-width: 576px) {
         .wrapper {
             height: 110vh;
+            .center-img {
+                img {
+                    height: 100vh;
+                }
+            //position: relative;
+
+            .center-texts {
+                position: absolute;
+                top: 33%;
+                left: 50%;
+                transform: translate(-50%, -47%);
+
+                .text {
+                    font-weight: 700;
+                    color: #bc8670;
+                }
+            }
+
+            .save-the-date {
+                font-size: 70px;
+                top: 3%;
+            }
+        }
         }
         .text {
             font-size: 40px; /* Kích thước cho màn hình có độ rộng tối thiểu là 576px */
@@ -81,7 +105,7 @@
 
     @media (min-width: 768px) {
         .text {
-            font-size: 54px; /* Kích thước cho màn hình có độ rộng tối thiểu là 768px */
+            font-size: 46px; /* Kích thước cho màn hình có độ rộng tối thiểu là 768px */
         }
     }
 </style>
