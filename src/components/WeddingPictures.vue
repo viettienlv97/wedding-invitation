@@ -1,8 +1,8 @@
 <template>
-    <div class="wrapper ">
+    <div class="wrapper">
         <div class="row no-gutters p-0 h-100 justify-content-center">
             <div class="col-sm-12 col-md-6">
-                <div class="title font-default my-5">ALBUMS</div>
+                <div class="title font-housttely fs-40 my-5">Albums</div>
                 <carousel 
                     :items-to-show="1"
                     :autoplay="2000"
@@ -16,35 +16,34 @@
                     </slide>
 
                     <template #addons>
-                        <navigation />
                         <pagination />
                     </template>
                 </carousel>
             </div>
             
         </div>
-        <ImgModal 
+        <!-- <ImgModal 
             v-if="openModal"
             :img = selectedImg
             class="position-fixed" 
             style="top: 0; left: 0;"
             @closeModal="closeModal"
-            />
+            /> -->
     </div>
 </template>
 
 <script>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-import ImgModal from './modal/ImgModal.vue'
+import { Carousel, Slide, Pagination } from 'vue3-carousel'
+// import ImgModal from './modal/ImgModal.vue'
 
 export default {
     components: {
         Carousel,
         Slide,
         Pagination,
-        Navigation,
-        ImgModal
+        //Navigation,
+        // ImgModal
     },
 
     data () {
@@ -79,18 +78,14 @@ export default {
 
 <style lang="scss" scoped>
     .wrapper {
-        background-color: white;
+        background-color: #ffedea;
         height: 100vh;
         position: relative;
-
-        .title {
-            font-size: 24px;
-        }
     }
     .img-wrapper {
         border-radius: 24px;
         padding: 8px;
-        background-color: rgb(71, 71, 71);
+        background-color: #ffedea;
         width: 500px;
         height: 500px;
         border: 2px solid white;
@@ -107,6 +102,14 @@ export default {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (min-width: 576px) {
+        .img-wrapper{
+            
+        width: 1000px;
+        height: 1000px;
         }
     }
 </style>

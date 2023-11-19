@@ -1,22 +1,50 @@
 <template>
-    <div class="wrapper justify-content-center">
-        <div class="row no-gutters h-100 align-items-center justify-content-center">
-            <div class="col-sm-12 col-md-6 center-img">
-                <img style="max-width: 100%;" src="../../public/img/main-background.png" alt="">
-                
-                <div class="save-the-date">Save the date</div>
-                
-                <div class="center-texts">
-                    <p class="text">Việt Tiến</p>
-                    <p class="text">Quỳnh Vân</p>
-                </div> 
-
-                <div class="info">
-                    <p class="">2023.12.02. FRI PM 05:00</p>
-                    <p class="">GOLDEN PALACE LONG BIEN</p>
+    <div class="wrapper justify-content-center position-relative">
+        <div class="row no-gutters justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-12 header-img">
+                        <img src="../assets/img/banner-heart.svg" alt="" width="100%" height="auto">
+                    </div>
                 </div>
             </div>
-            
+            <div class="col-12 mt-3 mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-12 main-content h-100">
+                        <div class="row justify-content-center">
+                            <div class="col-12 font-meow-script fs-40 fw-700">
+                                Save the Date
+                            </div>
+                            <div class="col-12 font-housttely fs-40 mt-5" style='color: #0d214f;'>
+                                Việt Tiến
+                            </div>
+                            <div class="col-12 fs-80">
+                                <img src="../assets/img/icon/graffiti-heart-shape.png" alt="" width="50px" height="45px">
+                            </div>
+                            <div class="col-12 font-housttely fs-40"  style='color: #0d214f;'>
+                                Quỳnh Vân
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-12 main-content h-100">
+                        <span class="font-meow-script fs-40">01.12.2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="position-absolute" style="bottom: 10vh; left: 10px;">
+            <img src="../assets/img/icon/banner-icon1.png" alt="" width="50px">
+        </div>
+        <div class="position-absolute" style="top: 40vh; right: 30px;">
+            <img src="../assets/img/icon/banner-icon2.png" alt="" width="50px">
+        </div>
+        <div class="position-absolute" style="top: 15vh; right: 10px;">
+            <img src="../assets/img/icon/banner-icon3.png" alt="" width="50px">
         </div>
     </div>
 </template>
@@ -27,6 +55,7 @@
 
 <style lang="scss" scoped>
     .wrapper {
+        background-color: #ffedea;
         width: 100%;
         height: 90vh;
 
