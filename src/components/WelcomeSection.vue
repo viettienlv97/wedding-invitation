@@ -19,7 +19,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-12 fs-20 font-patrick position-relative">
                         <img src="../assets/img/invite-calendar.png" alt="">
-                        <span class="position-absolute font-weight-bold fs-60" style="top: 34%; left: 28%; font-style: italic; color: #0d214f;">01.12</span>
+                        <span class="time position-absolute font-weight-bold fs-60">01.12</span>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="img-end mt-3">
+        <div class="img-end mt-3 mb-5">
             <img src="../assets/img/icon-glass.png" alt="" 
             style="
                 width: 80px;
@@ -66,6 +66,15 @@ export default {
     .wrapper {
         background-color: #fffdf8;
         width: 100%;
-        height: 100vh;
+        height: auto;
+        //height: 100vh;
+    }
+    .time {
+        top: 34%; left: 28%; font-style: italic; color: #0d214f;
+    }
+    @media (min-width: 576px) {
+        .time{
+            left: 43%;
+        }
     }
 </style>

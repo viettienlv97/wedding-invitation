@@ -37,13 +37,13 @@
             </div>
         </div>
         
-        <div class="position-absolute" style="bottom: 10vh; left: 10px;">
+        <div class="position-absolute star-1">
             <img src="../assets/img/icon/banner-icon1.png" alt="" width="50px">
         </div>
-        <div class="position-absolute" style="top: 40vh; right: 30px;">
+        <div class="position-absolute star-2">
             <img src="../assets/img/icon/banner-icon2.png" alt="" width="50px">
         </div>
-        <div class="position-absolute" style="top: 15vh; right: 10px;">
+        <div class="position-absolute star-3">
             <img src="../assets/img/icon/banner-icon3.png" alt="" width="50px">
         </div>
     </div>
@@ -57,7 +57,7 @@
     .wrapper {
         background-color: #ffedea;
         width: 100%;
-        height: 90vh;
+        height: 95vh;
 
         .center-img {
             position: relative;
@@ -96,13 +96,24 @@
             color: #4C572C;
         }
     }
+
+    .star-1 {
+        bottom: 10vh; 
+        left: 10px;
+    }
+    .star-2 {
+        top: 40vh; right: 30px;
+    }
+    .star-3 {
+        top: 15vh; right: 10px;
+    }
     .text {
         font-size: 30px; /* Kích thước mặc định */
         }
 
     @media (min-width: 576px) {
         .wrapper {
-            height: 110vh;
+            height: 100vh;
             .center-img {
                 img {
                     height: 100vh;
@@ -135,6 +146,17 @@
     @media (min-width: 768px) {
         .text {
             font-size: 46px; /* Kích thước cho màn hình có độ rộng tối thiểu là 768px */
+        }
+
+        .star-1 {
+            left: 25%;
+        }
+        .star-2 {
+            top: 60vh; right: 30%;
+        }
+        .star-3 {
+            top: 35vh;
+            right: 35%;
         }
     }
 </style>

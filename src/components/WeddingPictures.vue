@@ -1,22 +1,23 @@
 <template>
     <div class="wrapper">
         <div class="row no-gutters p-0 h-100 justify-content-center">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-10 col-md-6">
                 <div class="title font-housttely fs-40 my-5">Albums</div>
-                <carousel 
+                <carousel class="mb-5"
                     :items-to-show="1"
-                    :autoplay="2000"
+                    :autoplay="5000"
                     :transition="600"
                     :wrapAround="true"
                     >
                     <slide v-for="(image, index) in imageList" :key="index">
-                        <div class="img-wrapper font-default" @click="openModalImg(image)">
+                        <div class="img-wrapper mb-4 font-default" @click="openModalImg(image)">
                             <img v-lazy='image' alt="" class="img-fluid img">
                         </div>
                     </slide>
 
                     <template #addons>
-                        <pagination />
+                        <Pagination/>
+                        <!-- <navigation /> -->
                     </template>
                 </carousel>
             </div>
@@ -34,7 +35,12 @@
 
 <script>
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination } from 'vue3-carousel'
+import { 
+    Carousel, 
+    Slide, 
+    Pagination, 
+    //Navigation 
+} from 'vue3-carousel'
 // import ImgModal from './modal/ImgModal.vue'
 
 export default {
@@ -79,7 +85,7 @@ export default {
 <style lang="scss" scoped>
     .wrapper {
         background-color: #ffedea;
-        height: 100vh;
+        //height: 100vh;
         position: relative;
     }
     .img-wrapper {
@@ -104,12 +110,14 @@ export default {
             transform: translate(-50%, -50%);
         }
     }
+    .carousel__pagination{
+        margin: 0px;
+    }
 
     @media (min-width: 576px) {
         .img-wrapper{
-            
-        width: 1000px;
-        height: 1000px;
+            width: 600px;
+            height: 600px;
         }
     }
 </style>

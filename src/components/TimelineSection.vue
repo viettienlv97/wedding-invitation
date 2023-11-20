@@ -8,7 +8,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 mt-4">
+            <div class="col-12 mt-4 mb-5">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-12 fs-20 font-patrick position-relative">
                         <img style="max-width: 95%;" src="../assets/img/time_line.png" alt="">
@@ -25,11 +25,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .wrapper {
         background-color: #ffedea;
         width: 100%;
-        height: 90vh;
+        //height: 90vh;
     }
     .make-up-time {
         top: 95px;
