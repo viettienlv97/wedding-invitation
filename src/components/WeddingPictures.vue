@@ -11,7 +11,7 @@
                     >
                     <slide v-for="(image, index) in imageList" :key="index">
                         <div class="img-wrapper font-default" @click="openModalImg(image)">
-                            <img :src='image' alt="" class="img-fluid img">
+                            <img v-lazy='image' alt="" class="img-fluid img">
                         </div>
                     </slide>
 
